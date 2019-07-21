@@ -1,0 +1,48 @@
+
+body{
+    height: 100%;
+    width: 100%;
+}
+.p1{
+    font-family: 'Roboto', sans-serif;
+    height:100px;
+    font-size:16px;
+  }
+  .fl{
+    margin-left:20px;
+    float:left;
+  }
+  .fr{
+    margin-right:70px;
+    float:right;
+  }
+  .twit{
+    margin-top:20px;
+  }
+  .topm{
+    margin-top:20px;
+  }
+  .btn{
+    margin-top:00px;
+    position: relative;
+  }
+  
+  .container  {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-width:initial;
+  }
+  .card{
+    width:500px;
+    height:250px;
+  }
+  .p2{
+    margin-bottom:50px;
+  }
+  .container .row {
+    margin: 0 auto;
+  }
