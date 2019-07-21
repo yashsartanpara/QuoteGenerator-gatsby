@@ -22,7 +22,7 @@ class Quote extends React.Component {
 
 
         //quote = quotes[random]
-
+        this.setState({color});
         //this.setState({ quote: quote.node ,color })
     }
     randomColor() {
