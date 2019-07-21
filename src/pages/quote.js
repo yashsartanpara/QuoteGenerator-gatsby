@@ -21,9 +21,9 @@ class Quote extends React.Component {
             color = this.randomColor()
 
 
-        quote = quotes[random]
+        //quote = quotes[random]
 
-        this.setState({ quote: quote.node ,color })
+        //this.setState({ quote: quote.node ,color })
     }
     randomColor() {
 
@@ -34,6 +34,7 @@ class Quote extends React.Component {
         return rc;
     }
     componentWillMount() {
+        console.log(this.props.quote)
         this.setState({ allQuotes: this.props.quote })
         this.newQuote(this.props.quote)
     }
@@ -50,7 +51,7 @@ class Quote extends React.Component {
                             <div className="card-content white-text">
                                 <p className="p1">{
                                     //console.log(this.state.quote)
-                                    this.state.quote.quote.quote
+                                    //this.state.quote.quote.quote
                                 }</p>
                                 <p className="p2 col s6 offset-s6">- {this.state.quote.author}</p>
                             </div>
