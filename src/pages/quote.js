@@ -12,6 +12,12 @@ class Quote extends React.Component {
         color: ""
     }
 
+    componentWillMount() {
+        console.log(this.props.quote)
+        this.setState({ allQuotes: this.props.quote })
+        this.newQuote(this.props.quote)
+    }
+
     newQuote(quotes) {
         console.log(quotes)
         let min = 0,
@@ -21,9 +27,9 @@ class Quote extends React.Component {
             color = this.randomColor()
 
 
-        //quote = quotes[random]
-        this.setState({color});
-        //this.setState({ quote: quote.node ,color })
+        quote = quotes[random]
+        
+        this.setState({ quote: quote.node ,color })
     }
     randomColor() {
 
@@ -32,11 +38,6 @@ class Quote extends React.Component {
             rc += Math.floor(Math.random() * 16).toString(16);
         }
         return rc;
-    }
-    componentWillMount() {
-        console.log(this.props.quote)
-        this.setState({ allQuotes: this.props.quote })
-        this.newQuote(this.props.quote)
     }
 
     render() {
@@ -51,7 +52,7 @@ class Quote extends React.Component {
                             <div className="card-content white-text">
                                 <p className="p1">{
                                     //console.log(this.state.quote)
-                                    //this.state.quote.quote.quote
+                                    this.state.quote.quote.quote
                                 }</p>
                                 <p className="p2 col s6 offset-s6">- {this.state.quote.author}</p>
                             </div>
