@@ -20,8 +20,9 @@ class Quote extends React.Component {
 
 
     newQuote(quotes) {
+        console.log(quotes)
         let min = 0,
-            max = quotes.length,
+            max = 4,
             quote,
             random = Math.floor(Math.random() * (+max - +min)) + +min,
             color = this.randomColor()
