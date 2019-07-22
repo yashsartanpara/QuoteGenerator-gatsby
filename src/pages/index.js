@@ -4,8 +4,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import "./style.css"
-import Quote from './quote'
+import "../components/style.css"
+import Quote from '../components/quote'
 
 const IndexPage = ({data : { allContentfulQuotes }}) => (
   <Layout>

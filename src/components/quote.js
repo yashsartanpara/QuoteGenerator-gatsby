@@ -12,6 +12,13 @@ class Quote extends React.Component {
         color: ""
     }
 
+    componentWillMount() {
+        this.setState({ allQuotes: this.props.quote })
+
+        this.newQuote(this.props.quote)
+    }
+
+
     newQuote(quotes) {
         let min = 0,
             max = quotes.length,
@@ -22,7 +29,7 @@ class Quote extends React.Component {
 
         quote = quotes[random]
 
-        this.setState({ quote: quote.node ,color })
+        this.setState({ quote: quote.node, color })
     }
     randomColor() {
 
@@ -32,15 +39,11 @@ class Quote extends React.Component {
         }
         return rc;
     }
-    componentWillMount() {
-        this.setState({ allQuotes: this.props.quote })
-        this.newQuote(this.props.quote)
-    }
 
     render() {
         console.log(this.state.color)
         return (
-            
+
             <div align="center" className='container' css={css`background-color : ${this.state.color};`}>
                 <BodyClassName className={css`background-color : ${this.state.color};`}></BodyClassName>
                 <div className="newquote row valign-wrapper">
